@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Convite da Festa</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Swanky+and+Moo+Moo&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <img src="./assets/logoEgg.png" alt="Banner da festa" class="banner" />
+
+    <div class="lousa">
+      <h1>SIM! VOCÊ ESTÁ CONVIDADO(A), SURPRESO(A)?</h1>
+      <button id="startBtn">Começar</button>
+
+      <div id="countdownContainer" class="hidden">
+        <h2>PRONTO(A) PARA BRINCAR EM:</h2>
+        <p id="countdown"></p>
+      </div>
+
+      <div id="quizContainer" class="hidden">
+        <h2>RESPONDA PARA DESBLOQUEAR O CONVITE:</h2>
+        <p>QUAL É MEU CANTOR FAVORITO?</p>
+        <ul>
+          <li><button class="quizBtn">Roberto Carlos</button></li>
+          <li><button class="quizBtn">Justin Bieber</button></li>
+          <li><button class="quizBtn">Galinho Chicken Little</button></li>
+          <li><button class="quizBtn">Austin Malone</button></li>
+        </ul>
+        <p id="quizFeedback"></p>
+      </div>
+
+      <div id="invitationContainer" class="hidden">
+        <h2>* FESTA FANTASIA! TEMA: DISNEY/PIXAR</h2>
+        <h3>
+          Sem fantasia? Sem problema. Só prepare-se para o julgamento silencioso
+          (ou não)
+        </h3>
+        <h2>* LEVE SUA BEBIDA</h2>
+        <h2>* POOL PARTY! LEVE SEUS TRAJES DE BANHO</h2>
+        <h2><strong>ATENÇÃO</strong></h2>
+        <h2>PARECE FESTA INFANTIL, MAS NÃO É PARA CRIANÇAS</h2>
+        <h2>* O CONVITE É INDIVIDUAL</h2>
+        <h3>
+          O lugar é pequeno e a aniversariante tem fobia social, vamos
+          respeitar.
+        </h3>
+        <h4>DATA: 04/10/2025 / HORÁRIO: 11hrs</h4>
+        <h4>LOCAL: CASA DO CARALHO</h4>
+        <button>Confirmar presença</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

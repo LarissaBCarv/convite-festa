@@ -1,0 +1,180 @@
+body {
+  font-family: "Shadows Into Light", cursive;
+  background-image: url("./assets/fundo.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #333;
+  text-align: center;
+  padding: 20px;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 600px;
+  width: 90%;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+}
+
+.banner {
+  display: block;
+  margin: 0 auto 5px auto;
+  max-width: 25%;
+  height: auto;
+}
+
+.lousa {
+  max-width: 600px;
+  width: 100%;
+  margin: 10px auto;
+  background-color: #2e4d2f;
+  border: 10px solid #8b5a2b;
+  border-radius: 12px;
+  padding: 20px;
+  color: #fffacd;
+  font-size: 1.2rem;
+  font-family: "Amatic SC", cursive;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+}
+
+h3 {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+h2 {
+  font-family: "Amatic SC", cursive;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+h4 {
+  font-family: "Amatic SC", cursive;
+  font-size: 1.8rem;
+}
+
+p {
+  font-family: "Shadows Into Light", cursive;
+  color: #fffacd;
+  margin: 5px 0;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px 5px;
+  border: none;
+  background-color: #e30606;
+  color: white;
+  font-size: 1.2rem;
+  font-family: "Sigmar One", cursive;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #fed806;
+  color: #0c4886;
+  transform: scale(1.05);
+}
+
+#quizFeedback {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fed806;
+  margin-top: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .lousa {
+    max-width: 90%;
+    padding: 18px;
+    font-size: 1.1rem;
+  }
+  h2 {
+    font-size: 1.1rem;
+  }
+  h3 {
+    font-size: 0.65rem;
+  }
+  button {
+    font-size: 1.1rem;
+    padding: 9px 18px;
+  }
+  .banner {
+    max-width: 40%;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 15px;
+  }
+  .lousa {
+    padding: 15px;
+    font-size: 1rem;
+  }
+  h2 {
+    font-size: 1rem;
+  }
+  h3 {
+    font-size: 0.6rem;
+  }
+  button {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+  .banner {
+    max-width: 60%;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+  .lousa {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+  h2 {
+    font-size: 0.9rem;
+  }
+  h3 {
+    font-size: 0.5rem;
+  }
+  button {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+  }
+  .banner {
+    max-width: 80%;
+  }
+}
+@media (max-width: 768px) {
+  #quizFeedback {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #quizFeedback {
+    font-size: 1rem;
+  }
+}
