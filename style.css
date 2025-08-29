@@ -24,6 +24,8 @@ body {
   color: #333;
   text-align: center;
   padding: 20px;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 /* === Banner === */
@@ -32,6 +34,29 @@ body {
   margin: 0 auto 5px auto;
   max-width: 25%;
   height: auto;
+}
+
+.easteregg {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background-color: var(--amarelo);
+  color: var(--azul);
+  font-family: "Amatic SC", cursive;
+  font-size: 1.3rem;
+  padding: 8px 12px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: transform 0.3s, opacity 0.3s;
+  opacity: 0; /* invisível inicialmente */
+  pointer-events: none;
+}
+
+.easteregg.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1.1);
 }
 
 /* === Lousa Principal === */
@@ -59,7 +84,7 @@ body {
 .countdown-title,
 .quiz-title {
   font-family: "Amatic SC", cursive;
-  font-size: 2rem;
+  font-size: 1.7rem;
   margin-bottom: 20px;
   margin-top: 40px;
 }
@@ -67,7 +92,7 @@ body {
 .quiz-question {
   font-family: "Shadows Into Light", cursive;
   font-weight: 300;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   margin-bottom: 15px;
   margin-top: 20px;
 }
@@ -92,7 +117,7 @@ body {
 
 .fantasy-theme {
   font-family: "Amatic SC", cursive;
-  font-size: 2rem;
+  font-size: 1.7rem;
   font-weight: bold;
   color: var(--amarelo-claro);
   margin-top: 20px;
@@ -102,7 +127,7 @@ body {
 .no-costume-warning,
 .final-warning {
   font-family: "Saira Extra Condensed", sans-serif;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   margin: 10px auto;
   color: var(--amarelo-claro);
 }
@@ -111,7 +136,7 @@ body {
 .invitation-details li {
   font-family: "Amatic SC", cursive;
   list-style: none;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
   margin: 10px 0;
 }
@@ -161,7 +186,7 @@ button:hover,
 #countdown,
 .countdown-time {
   font-family: "Shadows Into Light", cursive;
-  font-size: 2rem;
+  font-size: 1.3rem;
   color: var(--vermelho);
   background: var(--amarelo);
   border: 5px solid var(--azul);
@@ -175,90 +200,70 @@ button:hover,
   display: none;
 }
 
-/* === Responsividade === */
+/* === RESPONSIVIDADE REAL === */
 @media (max-width: 1024px) {
   .lousa {
     max-width: 90%;
     padding: 18px;
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
-
   .intro-title {
     font-size: 2.2rem;
   }
-
   button,
   .rsvp-btn {
     font-size: 1.1rem;
     padding: 9px 18px;
   }
-
   .banner {
     max-width: 40%;
   }
-
   #quizFeedback,
   .quiz-feedback {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
   }
 }
 
 @media (max-width: 768px) {
-  body {
-    padding: 15px;
-  }
-
   .lousa {
     padding: 15px;
     font-size: 1rem;
   }
-
+  .intro-title {
+    font-size: 2rem;
+  }
   button,
   .rsvp-btn {
     font-size: 1rem;
     padding: 8px 16px;
   }
-
   .banner {
-    max-width: 60%;
+    max-width: 50%;
   }
-
   #quizFeedback,
   .quiz-feedback {
-    font-size: 1.2rem;
-  }
-
-  .intro-title {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
 
 @media (max-width: 480px) {
-  body {
-    padding: 10px;
-  }
-
   .lousa {
-    padding: 10px;
-    font-size: 1rem;
+    padding: 12px;
+    font-size: 0.95rem;
   }
-
+  .intro-title {
+    font-size: 1.8rem;
+  }
   button,
   .rsvp-btn {
     font-size: 0.9rem;
     padding: 6px 12px;
   }
-
   .banner {
-    max-width: 80%;
+    max-width: 70%;
   }
-
   #quizFeedback,
   .quiz-feedback {
-    font-size: 1rem;
-  }
-
-  .intro-title {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
   }
 }
