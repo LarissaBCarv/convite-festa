@@ -6,10 +6,7 @@
     <title>Convite da Festa</title>
     <link rel="icon" type="image/png" href="./assets/logoEgg.png" />
     <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Swanky+and+Moo+Moo&display=swap"
-      rel="stylesheet"
-    />
+    <!-- Fontes -->
     <link
       href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap"
       rel="stylesheet"
@@ -23,10 +20,6 @@
       rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@300;400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
       href="https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
@@ -34,51 +27,77 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
   </head>
+
   <body>
+    <audio id="bgMusic" src="./assets/tema.mp3" autoplay loop></audio>
+
     <img src="./assets/logoEgg.png" alt="Banner da festa" class="banner" />
 
-    <div class="lousa">
-      <h1>SIM! VOCÊ ESTÁ CONVIDADO(A), SURPRESO(A)?</h1>
-      <button id="startBtn">Começar</button>
+    <main class="lousa">
+      <!-- Introdução -->
+      <section class="intro">
+        <h1 class="intro-title">SIM! VOCÊ ESTÁ CONVIDADE, SURPRESE?</h1>
+        <button id="startBtn">Começar</button>
+      </section>
 
-      <div id="countdownContainer" class="hidden">
-        <h2>PRONTO(A) PARA BRINCAR EM:</h2>
-        <p id="countdown"></p>
-      </div>
+      <!-- Contagem Regressiva -->
+      <section id="countdownContainer" class="hidden countdown">
+        <h2 class="countdown-title">PRONTO PARA BRINCAR EM:</h2>
+        <h5 id="countdown" class="countdown-time"></h5>
+      </section>
 
-      <div id="quizContainer" class="hidden">
-        <h2>RESPONDA PARA DESBLOQUEAR O CONVITE:</h2>
-        <p>QUAL É MEU CANTOR FAVORITO?</p>
-        <ul>
+      <!-- Quiz -->
+      <section id="quizContainer" class="hidden quiz">
+        <h2 class="quiz-title">RESPONDA PARA DESBLOQUEAR O CONVITE:</h2>
+        <h3 class="quiz-question">QUAL É MEU CANTOR FAVORITO?</h3>
+        <ul class="quiz-options">
           <li><button class="quizBtn">Roberto Carlos</button></li>
           <li><button class="quizBtn">Justin Bieber</button></li>
           <li><button class="quizBtn">Galinho Chicken Little</button></li>
-          <li><button class="quizBtn">Austin Malone</button></li>
+          <li><button class="quizBtn">Chip Skylark</button></li>
         </ul>
-        <p id="quizFeedback"></p>
-      </div>
+        <p id="quizFeedback" class="quiz-feedback"></p>
+      </section>
 
-      <div id="invitationContainer" class="hidden">
-        <h2>* FESTA FANTASIA! TEMA: DISNEY/PIXAR</h2>
-        <h3>
-          Sem fantasia? Sem problema. Só prepare-se para o julgamento silencioso
-          (ou não)
-        </h3>
-        <h2>* LEVE SUA BEBIDA</h2>
-        <h2>* POOL PARTY! LEVE SEUS TRAJES DE BANHO</h2>
-        <h2><strong>ATENÇÃO</strong></h2>
-        <h2>PARECE FESTA INFANTIL, MAS NÃO É PARA CRIANÇAS</h2>
-        <h2>* O CONVITE É INDIVIDUAL</h2>
-        <h3>
+      <!-- Convite Final -->
+      <section id="invitationContainer" class="hidden invitation">
+        <h4 class="fantasy-theme">* FESTA FANTASIA! TEMA: DISNEY/PIXAR</h4>
+        <p class="no-costume-warning">
+          <strong>Sem fantasia?</strong> Sem problema. Só prepare-se para o
+          julgamento silencioso (ou não tão silencioso). Eu vou de woody, você
+          vai de outra fantasia.
+        </p>
+
+        <ul class="invitation-details">
+          <li><h4>* LEVE SUA BEBIDA</h4></li>
+          <li><h4>* POOL PARTY! LEVE SEUS TRAJES DE BANHO</h4></li>
+          <li>
+            <h6 class="alerta-importante">ATENÇÃO</h6>
+          </li>
+          <li><h4>PARECE FESTA INFANTIL, MAS NÃO É PARA CRIANÇAS</h4></li>
+          <li><h4>* O CONVITE É INDIVIDUAL</h4></li>
+        </ul>
+
+        <p class="final-warning">
           O lugar é pequeno e a aniversariante tem fobia social, vamos
           respeitar.
-        </h3>
-        <h4>DATA: 04/10/2025 / HORÁRIO: 11hrs</h4>
-        <h4>LOCAL: CASA DO CARALHO</h4>
-        <button>Confirmar presença</button>
-      </div>
-    </div>
+        </p>
+
+        <p class="event-info">DATA: 04/10/2025 / HORÁRIO: 10hrs</p>
+        <p class="event-location">LOCAL: CASA DO CARALHO</p>
+
+        <button class="rsvp-btn">Confirmar presença</button>
+      </section>
+    </main>
 
     <script src="script.js"></script>
   </body>

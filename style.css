@@ -1,5 +1,21 @@
+/* === Variáveis e Reset Global === */
+:root {
+  --vermelho: #e30606;
+  --amarelo: #fed806;
+  --azul: #0c4886;
+  --verde-lousa: #2e4d2f;
+  --marrom-quadro: #8b5a2b;
+  --amarelo-claro: #fffacd;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* === Corpo da Página === */
 body {
-  font-family: "Shadows Into Light", cursive;
   background-image: url("./assets/fundo.png");
   background-size: cover;
   background-position: center;
@@ -8,21 +24,9 @@ body {
   color: #333;
   text-align: center;
   padding: 20px;
-  margin: 0;
-  box-sizing: border-box;
 }
 
-.container {
-  max-width: 600px;
-  width: 90%;
-  margin: auto;
-  background: rgba(255, 255, 255, 0.95);
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-  box-sizing: border-box;
-}
-
+/* === Banner === */
 .banner {
   display: block;
   margin: 0 auto 5px auto;
@@ -30,52 +34,114 @@ body {
   height: auto;
 }
 
+/* === Lousa Principal === */
 .lousa {
   max-width: 600px;
   width: 100%;
   margin: 10px auto;
-  background-color: #2e4d2f;
-  border: 10px solid #8b5a2b;
+  background-color: var(--verde-lousa);
+  border: 10px solid var(--marrom-quadro);
   border-radius: 12px;
   padding: 20px;
-  color: #fffacd;
+  color: var(--amarelo-claro);
   font-size: 1.2rem;
   font-family: "Amatic SC", cursive;
   box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 0, 0, 0.3);
-  box-sizing: border-box;
 }
 
-h3 {
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 100;
-  font-style: normal;
-  font-size: 1rem;
-  margin: 5px 0;
-}
-
-h2 {
+/* === Títulos e Subtítulos === */
+.intro-title {
   font-family: "Amatic SC", cursive;
+  font-size: 2.5rem;
+  margin: 35px 0;
+}
+
+.countdown-title,
+.quiz-title {
+  font-family: "Amatic SC", cursive;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+
+.quiz-question {
+  font-family: "Shadows Into Light", cursive;
+  font-weight: 300;
   font-size: 1.8rem;
+  margin-bottom: 15px;
+  margin-top: 20px;
+}
+
+.quiz-options {
+  list-style: none;
+  padding: 0;
+}
+
+/* === Feedback do Quiz === */
+#quizFeedback,
+.quiz-feedback {
+  font-family: "Luckiest Guy", cursive;
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--amarelo);
+  margin-top: 10px;
+  text-shadow: -2px -2px 0 var(--azul), 2px -2px 0 var(--azul),
+    -2px 2px 0 var(--azul), 2px 2px 0 var(--azul);
+  -webkit-text-stroke: 0.5px var(--azul);
+}
+
+.fantasy-theme {
+  font-family: "Amatic SC", cursive;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--amarelo-claro);
+  margin-top: 20px;
   margin-bottom: 10px;
 }
 
-h4 {
+.no-costume-warning,
+.final-warning {
+  font-family: "Saira Extra Condensed", sans-serif;
+  font-size: 1.3rem;
+  margin: 10px auto;
+  color: var(--amarelo-claro);
+}
+
+/* === Detalhes do convite === */
+.invitation-details li {
   font-family: "Amatic SC", cursive;
-  font-size: 1.8rem;
+  list-style: none;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 10px 0;
 }
 
-p {
+.alerta-importante {
+  font-family: "Luckiest Guy", cursive;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--amarelo-claro);
+  margin-top: 20px;
+  text-shadow: -2px -2px 0 var(--vermelho), 2px -2px 0 var(--vermelho),
+    -2px 2px 0 var(--vermelho), 2px 2px 0 var(--vermelho);
+  -webkit-text-stroke: 0.5px var(--vermelho);
+}
+
+.event-info,
+.event-location {
   font-family: "Shadows Into Light", cursive;
-  color: #fffacd;
-  margin: 5px 0;
+  font-size: 2rem;
+  color: var(--amarelo-claro);
+  margin-top: 20px;
 }
 
-button {
+/* === Botões === */
+button,
+.rsvp-btn {
   padding: 10px 20px;
   margin: 10px 5px;
   border: none;
-  background-color: #e30606;
+  background-color: var(--vermelho);
   color: white;
   font-size: 1.2rem;
   font-family: "Sigmar One", cursive;
@@ -84,64 +150,86 @@ button {
   transition: background 0.3s, transform 0.2s;
 }
 
-button:hover {
-  background-color: #fed806;
-  color: #0c4886;
+button:hover,
+.rsvp-btn:hover {
+  background-color: var(--amarelo);
+  color: var(--azul);
   transform: scale(1.05);
 }
 
-#quizFeedback {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #fed806;
-  margin-top: 10px;
+/* === Título do tempo === */
+#countdown,
+.countdown-time {
+  font-family: "Shadows Into Light", cursive;
+  font-size: 2rem;
+  color: var(--vermelho);
+  background: var(--amarelo);
+  border: 5px solid var(--azul);
+  border-radius: 5px;
+  width: 60%;
+  margin: 10px auto;
 }
 
+/* === Classes Auxiliares === */
 .hidden {
   display: none;
 }
 
+/* === Responsividade === */
 @media (max-width: 1024px) {
   .lousa {
     max-width: 90%;
     padding: 18px;
     font-size: 1.1rem;
   }
-  h2 {
-    font-size: 1.3rem;
+
+  .intro-title {
+    font-size: 2.2rem;
   }
-  h3 {
-    font-size: 1rem;
-  }
-  button {
+
+  button,
+  .rsvp-btn {
     font-size: 1.1rem;
     padding: 9px 18px;
   }
+
   .banner {
     max-width: 40%;
   }
+
+  #quizFeedback,
+  .quiz-feedback {
+    font-size: 1.4rem;
+  }
 }
 
 @media (max-width: 768px) {
   body {
     padding: 15px;
   }
+
   .lousa {
     padding: 15px;
     font-size: 1rem;
   }
-  h2 {
-    font-size: 1.3rem;
-  }
-  h3 {
-    font-size: 1rem;
-  }
-  button {
+
+  button,
+  .rsvp-btn {
     font-size: 1rem;
     padding: 8px 16px;
   }
+
   .banner {
     max-width: 60%;
+  }
+
+  #quizFeedback,
+  .quiz-feedback {
+    font-size: 1.2rem;
+  }
+
+  .intro-title {
+    font-size: 2rem;
   }
 }
 
@@ -149,32 +237,28 @@ button:hover {
   body {
     padding: 10px;
   }
+
   .lousa {
     padding: 10px;
     font-size: 1rem;
   }
-  h2 {
-    font-size: 1.3rem;
-  }
-  h3 {
-    font-size: 1rem;
-  }
-  button {
+
+  button,
+  .rsvp-btn {
     font-size: 0.9rem;
     padding: 6px 12px;
   }
+
   .banner {
     max-width: 80%;
   }
-}
-@media (max-width: 768px) {
-  #quizFeedback {
-    font-size: 1.2rem;
-  }
-}
 
-@media (max-width: 480px) {
-  #quizFeedback {
+  #quizFeedback,
+  .quiz-feedback {
     font-size: 1rem;
+  }
+
+  .intro-title {
+    font-size: 1.8rem;
   }
 }

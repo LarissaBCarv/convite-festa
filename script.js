@@ -2,7 +2,9 @@ document.getElementById("startBtn").addEventListener("click", () => {
   document.getElementById("startBtn").style.display = "none";
   document.getElementById("countdownContainer").classList.remove("hidden");
   document.getElementById("quizContainer").classList.remove("hidden");
-  startCountdown("2025-10-04T11:00:00");
+  startCountdown("2025-10-04T10:00:00");
+  const music = document.getElementById("bgMusic");
+  music.play();
 });
 
 function startCountdown(dateString) {
@@ -38,6 +40,7 @@ quizBtns.forEach((btn) => {
       invitationContainer.classList.remove("hidden");
     } else {
       quizFeedback.textContent = "Errado! Tente novamente";
+      invitationContainer.classList.add("hidden");
     }
   });
 });
@@ -45,8 +48,8 @@ quizBtns.forEach((btn) => {
 const confirmBtn = document.querySelector("#invitationContainer button");
 
 confirmBtn.addEventListener("click", () => {
-  const phoneNumber = "5512982062403";
-  const message = encodeURIComponent("Olá! Confirmo minha presença na festa!");
+  const phoneNumber = "5512982446776";
+  const message = encodeURIComponent("Amigo, estarei lá!");
   const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
   window.open(whatsappURL, "_blank");
 
