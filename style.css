@@ -117,7 +117,7 @@ body {
 
 .fantasy-theme {
   font-family: "Amatic SC", cursive;
-  font-size: 1.7rem;
+  font-size: 1.9rem;
   font-weight: bold;
   color: var(--amarelo-claro);
   margin-top: 20px;
@@ -125,6 +125,7 @@ body {
 }
 
 .no-costume-warning,
+.pool-warning,
 .final-warning {
   font-family: "Saira Extra Condensed", sans-serif;
   font-size: 1.2rem;
@@ -136,7 +137,7 @@ body {
 .invitation-details li {
   font-family: "Amatic SC", cursive;
   list-style: none;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: bold;
   margin: 10px 0;
 }
@@ -186,11 +187,7 @@ button:hover,
 #countdown,
 .countdown-time {
   font-family: "Shadows Into Light", cursive;
-  font-size: 1.3rem;
-  color: var(--vermelho);
-  background: var(--amarelo);
-  border: 5px solid var(--azul);
-  border-radius: 5px;
+  font-size: 1.5rem;
   width: 60%;
   margin: 10px auto;
 }
