@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const logo = document.querySelector(".banner");
 
   if (easterEgg && logo) {
-    logo.addEventListener("dblclick", () => {
+    logo.addEventListener("click", () => {
       easterEgg.classList.toggle("show");
     });
   }
